@@ -1,0 +1,69 @@
+IglesiaBundle\Entity\Usuario:
+    type: entity
+    table: usuario
+    indexes:
+        fk_USUARIO_ROL_idx:
+            columns:
+                - rol_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nombres:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+        apellidos:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+        fechaNacimiento:
+            type: date
+            nullable: true
+            column: fecha_nacimiento
+        correo:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+        contrasena:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+        imagen:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        estado:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+    manyToOne:
+        rol:
+            targetEntity: Rol
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                rol_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

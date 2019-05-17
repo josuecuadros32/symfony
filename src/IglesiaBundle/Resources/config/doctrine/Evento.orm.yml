@@ -1,0 +1,53 @@
+IglesiaBundle\Entity\Evento:
+    type: entity
+    table: evento
+    indexes:
+        fk_evento_calendario1_idx:
+            columns:
+                - calendario_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        hora:
+            type: time
+            nullable: true
+        nombre:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+        imagen:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        estado:
+            type: boolean
+            nullable: true
+        descripcion:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+    manyToOne:
+        calendario:
+            targetEntity: Calendario
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                calendario_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

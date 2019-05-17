@@ -1,0 +1,35 @@
+IglesiaBundle\Entity\Horario:
+    type: entity
+    table: horario
+    indexes:
+        fk_horario_iglesia1_idx:
+            columns:
+                - iglesia_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        horarios:
+            type: text
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+    manyToOne:
+        iglesia:
+            targetEntity: Iglesia
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                iglesia_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

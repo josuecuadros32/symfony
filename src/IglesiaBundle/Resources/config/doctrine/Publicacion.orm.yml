@@ -1,0 +1,47 @@
+IglesiaBundle\Entity\Publicacion:
+    type: entity
+    table: publicacion
+    indexes:
+        fk_publicacion_pagina1_idx:
+            columns:
+                - pagina_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        titulo:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+        descripcion:
+            type: text
+            nullable: true
+            length: 16777215
+            options:
+                fixed: false
+        tipo:
+            type: string
+            nullable: true
+            length: 15
+            options:
+                fixed: false
+    manyToOne:
+        pagina:
+            targetEntity: Pagina
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                pagina_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

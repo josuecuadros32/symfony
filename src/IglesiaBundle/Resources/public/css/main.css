@@ -1,0 +1,165 @@
+body {
+    background: #FFFFFF;
+
+}
+
+/*Logo */
+.log {
+    height: 3em;
+}
+
+
+/*Imagen principal*/
+.iglesia {
+    width: 100%;
+    height: 35em;
+}
+
+/*publicaciones*/
+
+.dos_columnas {
+    max-width: 100%;
+    ;
+    height: 25em;
+
+
+}
+
+.ito {
+    height: 5em;
+}
+
+.copy {
+    margin-top: 3em;
+    margin-right: 5em;
+}
+
+
+/* ---IMAGENES--- */
+.altura-img {
+    height: 2em;
+}
+
+.logo-peque {
+    height: 3em;
+}
+
+.logo-ito {
+    height: 4em;
+}
+
+/* ---IMAGENES--- */
+
+
+/* ---FOOTER--- */
+.fondo-borde {
+    background-color: #21d192;
+}
+
+.texto-blanco {
+    color: #7aade8;
+}
+
+.row-copyr {
+    background: #2E2E2E;
+}
+
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* ---FOOTER--- */
+
+
+/* ---PROPOSITO GENERAL--- */
+.escondete {
+    visibility: hidden;
+}
+
+.lobster {
+    font-family: 'Playball', cursive;
+}
+
+.height-full {
+    height: 50vh;
+}
+
+/* ---PROPOSITO GENERAL--- */
+
+
+
+
+.bg {
+    background-color: #202521;
+}
+
+
+
+.bor {
+    border: 0px;
+}
+
+
+.titulo_carrusel {
+    background: rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    z-index: 10;
+    color: white;
+    width: 100%;
+    text-align: center;
+    top: 11%;
+    font-size: 5rem;
+}
+
+
+.titulo_iglesia {
+    position: absolute;
+    z-index: 5;
+    color: white;
+    width: 100%;
+    text-align: center;
+    top: 11%;
+    font-size: 5rem;
+}
+
+
+
+
+/*prueba*/
+
+
+.menu {
+    position: absolute;
+    top: 27%;
+    left: 0;
+    z-index: 888;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.color {
+    background: #2E2E2E;
+}
+
+
+.reg {
+    margin: auto;
+}
+
+
+.buton {
+    margin-left: 45%;
+}

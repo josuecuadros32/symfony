@@ -1,0 +1,41 @@
+IglesiaBundle\Entity\Pagina:
+    type: entity
+    table: pagina
+    indexes:
+        fk_pagina_iglesia1_idx:
+            columns:
+                - iglesia_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        titulo:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+        imagen:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+    manyToOne:
+        iglesia:
+            targetEntity: Iglesia
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                iglesia_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,69 @@
+{% extends "@Iglesia/Auth/plantilla_registro.html.twig" %}
+
+
+    
+
+
+
+{% block body %}
+
+    <!--Formulario-->
+    <div class="row">
+<div class="col-md-8   m-auto">
+<br><h2 class="lobster text-center texto-blanco">Registro</h2><br>
+<form>
+
+<div class="form-group mt-2">
+    <select class=" selected-input selected-input2 form-control"  name="select">
+  <option value="value1" selected>usuario</option> 
+  <option value="value2" >pastor</option>
+  <option value="value3">admin</option>
+</select>
+</div>
+
+
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Nombres</label>
+        <input class="form-control" id="exampleFormControlnombre" placeholder="Ingrese el nombre " type="text">
+    </div>
+     <div class="form-group">
+        <label for="exampleFormControlInput1">Apellidos</label>
+        <input class="form-control" id="exampleFormControlapellido" placeholder="Ingrese su apellido" type="text">
+    </div>
+
+ <div class="form-group">
+        <label for="exampleFormControlInput1">Correo Electronico</label>
+        <input class="form-control" id="exampleFormControlcorreo" placeholder="Ingrese el correo de la iglesia" type="email">
+    </div>
+    
+<div class="form-group">
+        <label for="exampleFormControlInput1">Contraseña</label>
+        <input class="form-control" id="exampleFormControlcontrasena" placeholder="Ingrese su contraseña" type="password">
+    </div>
+
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Fecha de Nacimiento</label>
+        <input class="form-control" id="exampleFormControlfechnacimento" placeholder="Ingrese su fecha de nacimiento" type="date">
+    </div>
+
+
+<div class="form-group">
+    <label for="exampleFormControlFile1">Foto de perfil</label>
+    <input class="form-control-file" id="exampleFormControlFile1" type="file">
+</div>
+
+
+<button class="btn btn-primary" type="button">Enviar</button>
+<button class="btn btn-dark ml-2" type="reset">Reset</button>
+ <a href="{{ path('inicio_usuario') }}"><button class="btn btn-secondary ml-2" type="button">Cancelar</button></a>
+
+</form>
+</div>
+</div>
+    
+{% endblock %}
+
+
+

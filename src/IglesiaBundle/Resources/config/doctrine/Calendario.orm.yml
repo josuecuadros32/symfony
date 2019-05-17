@@ -1,0 +1,38 @@
+IglesiaBundle\Entity\Calendario:
+    type: entity
+    table: calendario
+    indexes:
+        fk_calendario_pagina1_idx:
+            columns:
+                - pagina_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        fecha:
+            type: date
+            nullable: true
+        mes:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+    manyToOne:
+        pagina:
+            targetEntity: Pagina
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                pagina_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,44 @@
+{% extends "@Iglesia/Auth/plantilla_login.html.twig" %}
+
+
+    
+
+
+
+{% block body %}
+
+    <!--Formulario-->
+    <div class="row">
+<div class="col-md-6 m-auto  ">
+<br><h2 class="lobster text-center texto-blanco ">Login</h2><br>
+<form>
+    
+    <div class="form-group ml-5 ">
+        <label for="exampleFormControlInput1">Correo Electronico</label>
+        <input class="form-control" id="exampleFormControlcorreo" placeholder="Ingrese su correo" type="text">
+    </div>
+    
+
+
+    
+
+<div class="form-group ml-5 ">
+    <label for="exampleFormControlpassword">Contraseña</label>
+    <input class="form-control" id="exampleFormControlpassword" type="password">
+</div>
+
+
+<ul>
+<button class="btn btn-primary ml-1" type="button">Enviar</button>
+<button class="btn btn-dark " type="reset">Reset</button>
+ <a href="{{ path('inicio_usuario') }}"><button class="btn btn-secondary " type="button">Cancelar</button></a>
+</ul>
+</form>
+</div>
+</div>
+    
+{% endblock %}
+
+
+
+

@@ -1,0 +1,35 @@
+IglesiaBundle\Entity\PiePagina:
+    type: entity
+    table: pie_pagina
+    indexes:
+        fk_pie_pagina_pagina1_idx:
+            columns:
+                - pagina_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        descripcion:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+    manyToOne:
+        pagina:
+            targetEntity: Pagina
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                pagina_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

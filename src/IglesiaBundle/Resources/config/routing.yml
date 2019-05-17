@@ -1,0 +1,41 @@
+iglesia_homepage:
+    path:     /
+    defaults: { _controller: IglesiaBundle:Default:index }
+
+
+
+#####USUARIOS######
+
+
+
+inicio_usuario:
+    path: /inicio
+    defaults: {_controller: IglesiaBundle:Inicio:inicio_usuario}
+
+
+
+
+registro_usuario:
+    path: /registro
+    defaults: {_controller: IglesiaBundle:Auth:registro}
+
+
+
+
+    
+login_usuario:
+    path: /login
+    defaults: {_controller: IglesiaBundle:Auth:login}
+
+
+
+
+iglesias_usuario: 
+    path: /iglesias
+    defaults: {_controller: IglesiaBundle:Iglesias:iglesias}
+
+
+
+iglesia_usuario:
+    path: /iglesia
+    defaults: {_controller: IglesiaBundle:Iglesia:iglesia}
